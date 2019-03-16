@@ -17,7 +17,7 @@ Get-ChildItem -File -Recurse -Path $SourceFolder | ForEach-Object {
         }
 
         # Check file already exist
-        $full_file_path = Join-Path $target_part $files[0].Name
+        $full_file_path = Join-Path $target_part $_.Name
         if (-not (Test-Path $full_file_path)) {
         }
         else {
